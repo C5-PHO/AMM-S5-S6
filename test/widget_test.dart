@@ -9,8 +9,8 @@ void main() {
     await tester.pumpWidget(const CalendarApp());
 
     // Verifica los textos principales del calendario.
-    expect(find.text('Septiembre 2026'), findsOneWidget);
-    expect(find.text('26'), findsOneWidget);
+    expect(find.text('SEPTIEMBRE 2026'), findsOneWidget);
+    expect(find.text('26'), findsNWidgets(2));
 
     // Verifica las tres actividades visuales requeridas por el laboratorio.
     expect(find.text('Clase de Flutter'), findsOneWidget);
